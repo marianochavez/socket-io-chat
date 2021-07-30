@@ -2,7 +2,7 @@ const miFormulario = document.querySelector("form");
 
 const url = window.location.hostname.includes("localhost")
   ? "http://localhost:8000/api/users/"
-  : "https://restserver-node21.herokuapp.com/api/users/";
+  : "https://node-socket-chat-io.herokuapp.com/api/users/";
 
 miFormulario.addEventListener("submit", (ev) => {
   ev.preventDefault();
