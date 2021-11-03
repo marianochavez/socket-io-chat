@@ -2,13 +2,15 @@
 
  
 Utilizar ```npm install``` para instalar módulos de Node.
+
 Utilizado para **login**: jsonwebtoken + google-auth-library(desactualizado)
 
 ## Socket.IO
 El canal bidireccional entre en Servido Socket.IO (Node.js) y el Cliente Socket.IO (browser, Node.js o app) es establecida mediante WebSocket, utilizando HTTP long-polling.
 Socket.io se divide en dos capas:
-	- La "cañeria" de bajo nivel donde está el Engine.IO, que es el motor que utiliza socket.io
-	- La API en un alto nivel que sería el Socket.io propiamente
+
+- La "cañeria" de bajo nivel donde está el Engine.IO, que es el motor que utiliza socket.io
+- La API en un alto nivel que sería el Socket.io propiamente
 
 El Engine.IO es el responsable de establecer la conexion de bajo nivel del cliente-servidor. Maneja:
 - **Los transportes:  HTTP long-polling y el WebSocket**
@@ -22,7 +24,7 @@ El Engine.IO es el responsable de establecer la conexion de bajo nivel del clien
 	- Consiste en los siguientes pasos resumidos:
 		1. Realiza el Handshake, al comienzo de la conexión del Engine.io el servidor envia la siguiente informacion: 
 		`{ "sid":  "FSDjX-WRwSA4zTZMALqx", "upgrades":  ["websocket"], "pingInterval":  25000, "pingTimeout":  20000}`
-			El session id va a ser usado en las sub-siguientes requests.
+		El session id va a ser usado en las sub-siguientes requests.
 		2. Enviar data (HTTP long-polling)
 		3. Recibir data (HTTP long-polling)
 		4. Actualizar (WebSocket)
